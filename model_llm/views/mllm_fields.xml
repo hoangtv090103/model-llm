@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_mllm_fields_form" model="ir.ui.view">
+            <field name="name">mllm.fields.form</field>
+            <field name="model">mllm.fields</field>
+            <field name="arch" type="xml">
+                <form string="Fields">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="model_id"/>
+                            <field name="type"/>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Relations">
+                            <tree>
+                                <field name="relation"/>
+                                <field name="relation_field"/>
+                            </tree>
+                        </page>
+                        <page string="Attributes">
+                            <tree>
+                                <field name="required"/>
+                                <field name="readonly"/>
+                                <field name="unique"/>
+                                <field name="translate"/>
+                                <field name="store"/>
+                                <field name="index"/>
+                                <field name="compute"/>
+                                <field name="inverse"/>
+                                <field name="search"/>
+                                <field name="ondelete"/>
+                                <field name="domain"/>
+                                <field name="context"/>
+                                <field name="group"/>
+                                <field name="copy"/>
+                                <field name="help"/>
+                                <field name="string"/>
+                                <field name="related"/>
+                                <field name="default"/>
+                                <field name="size"/>
+                                <field name="digits"/>
+                                <field name="track_visibility"/>
+                                <field name="attachment"/>
+                            </tree>
+                        </page>
+                        <!-- <page string="Selection">
+                            <tree>
+                                <field name="selection"/>
+                            </tree>
+                        </page> -->
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_mllm_fields" model="ir.actions.act_window">
+            <field name="name">Fields</field>
+            <field name="res_model">mllm.fields</field>
+            <field name="view_mode">form</field>
+        </record>
+    </data>
+</odoo>

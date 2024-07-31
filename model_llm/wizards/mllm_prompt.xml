@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_mllm_prompt_form" model="ir.ui.view">
+            <field name="name">mllm.prompt.form</field>
+            <field name="model">mllm.prompt</field>
+            <field name="arch" type="xml">
+                <form string="Prompt">
+                    <sheet>
+                        <group>
+                            <field name="model" required="1"/>
+                            <field name="prompt" required="1"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_prompt" string="Prompt" type="object" class="btn-primary"/>
+                        <button string="Cancel" special="cancel" class="btn-default"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_mllm_prompt" model="ir.actions.act_window">
+            <field name="name">Prompt</field>
+            <field name="res_model">mllm.prompt</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_mllm_prompt_form"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

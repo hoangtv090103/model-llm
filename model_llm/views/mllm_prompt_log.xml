@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_mllm_prompt_log_form" model="ir.ui.view">
+            <field name="name">mllm.prompt.log.form</field>
+            <field name="model">mllm.prompt.log</field>
+            <field name="arch" type="xml">
+                <form string="Promp Log">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="model"/>
+                            <field name="create_date"/>
+                            <field name="prompt"/>
+                        </group>
+                        <group>
+                            <field name="db_query"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_mllm_prompt_log_tree" model="ir.ui.view">
+            <field name="name">mllm.prompt.log.tree</field>
+            <field name="model">mllm.prompt.log</field>
+            <field name="arch" type="xml">
+                <tree string="Promp">
+                    <field name="model"/>
+                    <field name="state"/>
+                    <field name="create_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_mllm_prompt_log" model="ir.actions.act_window">
+            <field name="name">Promp Log</field>
+            <field name="res_model">mllm.prompt.log</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

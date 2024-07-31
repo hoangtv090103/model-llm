@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mllm_prompt,access_mllm_prompt,model_mllm_prompt,base.group_user,1,1,1,1
+access_mllm_prompt_log,access_mllm_prompt_log,model_mllm_prompt_log,base.group_user,1,1,1,1
+access_mllm_fields,access_mllm_fields,model_mllm_fields,base.group_user,1,1,1,1
+access_mllm_models,access_mllm_models,model_mllm_models,base.group_user,1,1,1,1

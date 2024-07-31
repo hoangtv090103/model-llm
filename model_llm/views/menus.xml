@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_mllm" name="Model LLM" sequence="10" />
+        <menuitem id="menu_mllm_prompt_log" name="Prompt Log" parent="menu_mllm" action="action_mllm_prompt_log" sequence="10"/>
+        <menuitem id="menu_mllm_prompt" name="Prompt" parent="menu_mllm" action="action_mllm_prompt" sequence="20"/>
+        <menuitem id="menu_mllm_models" name="Models" parent="menu_mllm" action="action_mllm_models" sequence="30"/>
+    </data>
+</odoo>

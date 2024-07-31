@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_mllm_models_form" model="ir.ui.view">
+            <field name="name">mllm.models.form</field>
+            <field name="model">mllm.models</field>
+            <field name="arch" type="xml">
+                <form string="Created Models">
+                    <sheet>
+                        <group>
+                            <field name="model"/>
+                            <field name="create_date"/>
+                            <field name="prompt_log_id"/>
+                        </group>
+                    </sheet>
+                    <notebook>
+                        <page string="Fields">
+                            <field name="field_ids" widget="one2many_list"/>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_mllm_models_tree" model="ir.ui.view">
+            <field name="name">mllm.models.tree</field>
+            <field name="model">mllm.models</field>
+            <field name="arch" type="xml">
+                <tree string="Models">
+                    <field name="model"/>
+                    <field name="create_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_mllm_models" model="ir.actions.act_window">
+            <field name="name">Models</field>
+            <field name="res_model">mllm.models</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
