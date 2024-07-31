@@ -3,7 +3,7 @@ from odoo import models, fields, api
 
 class MLLMFields(models.Model):
     _name = 'mllm.fields'
-    
+    _description = "Fields"
     model_id = fields.Many2one('mllm.models', string='Model')
     
     name = fields.Char(string='Name')

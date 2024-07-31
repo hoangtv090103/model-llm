@@ -12,12 +12,12 @@
                             <field name="create_date"/>
                             <field name="prompt_log_id"/>
                         </group>
+                        <notebook>
+                            <page string="Fields">
+                                <field name="field_ids" widget="one2many_list"/>
+                            </page>
+                        </notebook>
                     </sheet>
-                    <notebook>
-                        <page string="Fields">
-                            <field name="field_ids" widget="one2many_list"/>
-                        </page>
-                    </notebook>
                 </form>
             </field>
         </record>

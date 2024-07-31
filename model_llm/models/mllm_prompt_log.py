@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class PromptLog(models.Model):
     _name = "mllm.prompt.log"
+    _description = "Prompt Log"
 
     prompt = fields.Text(string="Prompt")
     model = fields.Char(string="Model Name")

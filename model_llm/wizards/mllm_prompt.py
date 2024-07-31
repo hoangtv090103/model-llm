@@ -42,7 +42,7 @@ DATATYPES = {
     'xml': str,
 }
 
-class Prompt(models.Model):
+class Prompt(models.TransientModel):
     _name = "mllm.prompt"
     _description = "Prompt"
 
