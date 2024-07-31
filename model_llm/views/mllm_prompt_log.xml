@@ -11,12 +11,14 @@
                     </header>
                     <sheet>
                         <group>
-                            <field name="model"/>
-                            <field name="create_date"/>
-                            <field name="prompt"/>
-                        </group>
-                        <group>
-                            <field name="db_query"/>
+                            <group>
+                                <field name="model" readonly="1"/>
+                                <field name="create_date" />
+                                <field name="prompt" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="db_query" readonly="1"/>
+                            </group>
                         </group>
                     </sheet>
                 </form>
